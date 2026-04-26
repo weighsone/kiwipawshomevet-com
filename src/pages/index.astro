@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const u = (path: string) => `${base}${path}`;
 ---
 
 <Layout title="Home" description="Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato, New Zealand.">
@@ -23,11 +25,11 @@ import Layout from '../layouts/Layout.astro';
           Comfortable, stress-free check-ups and care for your beloved pets, anywhere in New Zealand's Waikato region.
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="/book" class="btn-primary">
+          <a href={u("/book")} class="btn-primary">
             Book a Home Visit
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="/services" class="btn-outline" style="border-color: white; color: white;">
+          <a href={u("/services")} class="btn-outline" style="border-color: white; color: white;">
             Our Services
           </a>
         </div>
@@ -135,7 +137,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="text-center">
-        <a href="/services" class="btn-primary" style="background-color: white; color: #6b8c5a;">
+        <a href={u("/services")} class="btn-primary" style="background-color: white; color: #6b8c5a;">
           View All Services &amp; Pricing
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
@@ -179,7 +181,7 @@ import Layout from '../layouts/Layout.astro';
               </li>
             ))}
           </ul>
-          <a href="/about" class="btn-primary">
+          <a href={u("/about")} class="btn-primary">
             Learn More About Nicole
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -228,7 +230,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="text-center mt-8">
-        <a href="/testimonials" class="btn-outline">Read More Reviews</a>
+        <a href={u("/testimonials")} class="btn-outline">Read More Reviews</a>
       </div>
     </div>
   </section>
@@ -243,7 +245,7 @@ import Layout from '../layouts/Layout.astro';
         Contact Nicole today and give your pet the stress-free care they deserve — right in the comfort of home.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">
+        <a href={u("/book")} class="btn-primary" style="background-color: white; color: #6b8c5a;">
           Book Now
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>

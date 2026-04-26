@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const u = (path: string) => `${base}${path}`;
 ---
 
 <Layout title="About Nicole" description="Meet Nicole, Kiwi Paws Home Vet's passionate veterinarian with over 10 years of experience in companion animal care across Hamilton and Waikato, NZ.">
@@ -52,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <a href="/book" class="btn-primary">Book a Home Visit</a>
+          <a href={u("/book")} class="btn-primary">Book a Home Visit</a>
         </div>
       </div>
 
@@ -131,7 +133,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-xl mx-auto px-4">
       <h2 class="text-2xl font-bold text-white mb-3" style="font-family: 'Playfair Display', Georgia, serif;">Ready to meet Nicole?</h2>
       <p class="text-white/90 mb-6">Book a home visit and see the difference stress-free vet care can make.</p>
-      <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
+      <a href={u("/book")} class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
     </div>
   </section>
 

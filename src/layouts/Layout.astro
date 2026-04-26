@@ -8,11 +8,14 @@ interface Props {
 
 const { title, description = 'Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato region, New Zealand.' } = Astro.props;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const u = (path: string) => `${base}${path}`;
+
 const navLinks = [
-  { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About Us' },
-  { href: '/testimonials', label: 'Testimonials' },
-  { href: '/contact', label: 'Contact' },
+  { href: u('/services'), label: 'Services' },
+  { href: u('/about'), label: 'About Us' },
+  { href: u('/testimonials'), label: 'Testimonials' },
+  { href: u('/contact'), label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -24,7 +27,7 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -38,8 +41,8 @@ const currentPath = Astro.url.pathname;
         <div class="flex items-center justify-between h-16 md:h-20">
 
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-2 group">
-            <img src="/images/logo.svg" alt="Kiwi Paws Home Vet" class="h-12 md:h-14 w-auto" />
+          <a href={u('/')} class="flex items-center gap-2 group">
+            <img src={u('/images/logo.svg')} alt="Kiwi Paws Home Vet" class="h-12 md:h-14 w-auto" />
           </a>
 
           <!-- Desktop Nav -->
@@ -56,7 +59,7 @@ const currentPath = Astro.url.pathname;
 
           <!-- CTA -->
           <div class="hidden md:flex items-center gap-3">
-            <a href="/book" class="btn-primary text-sm">
+            <a href={u('/book')} class="btn-primary text-sm">
               Book a Home Visit
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
@@ -86,7 +89,7 @@ const currentPath = Astro.url.pathname;
             </a>
           ))}
           <div class="pt-2">
-            <a href="/book" class="btn-primary text-sm w-full justify-center">
+            <a href={u('/book')} class="btn-primary text-sm w-full justify-center">
               Book a Home Visit 🐾
             </a>
           </div>
@@ -105,7 +108,7 @@ const currentPath = Astro.url.pathname;
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
           <div class="md:col-span-2">
-            <img src="/images/logo-white.svg" alt="Kiwi Paws Home Vet" class="h-12 w-auto mb-3 opacity-90" />
+            <img src={u('/images/logo-white.svg')} alt="Kiwi Paws Home Vet" class="h-12 w-auto mb-3 opacity-90" />
             <p class="text-sm leading-relaxed text-gray-400 max-w-xs">
               Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato region.
             </p>
@@ -126,12 +129,12 @@ const currentPath = Astro.url.pathname;
           <div>
             <h3 class="font-semibold text-white mb-3">Quick Links</h3>
             <ul class="space-y-2 text-sm text-gray-400">
-              <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-              <li><a href="/services" class="hover:text-white transition-colors">Services & Pricing</a></li>
-              <li><a href="/about" class="hover:text-white transition-colors">About Nicole</a></li>
-              <li><a href="/testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="/book" class="hover:text-white transition-colors">Book a Visit</a></li>
+              <li><a href={u('/')} class="hover:text-white transition-colors">Home</a></li>
+              <li><a href={u('/services')} class="hover:text-white transition-colors">Services & Pricing</a></li>
+              <li><a href={u('/about')} class="hover:text-white transition-colors">About Nicole</a></li>
+              <li><a href={u('/testimonials')} class="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href={u('/contact')} class="hover:text-white transition-colors">Contact</a></li>
+              <li><a href={u('/book')} class="hover:text-white transition-colors">Book a Visit</a></li>
             </ul>
           </div>
 

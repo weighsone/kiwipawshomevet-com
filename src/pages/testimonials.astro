@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const u = (path: string) => `${base}${path}`;
 
 const testimonials = [
   {
@@ -107,7 +109,7 @@ const testimonials = [
         Experience the difference yourself
       </h2>
       <p class="text-white/90 mb-6">Join our growing list of happy Waikato clients.</p>
-      <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
+      <a href={u("/book")} class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
     </div>
   </section>
 
