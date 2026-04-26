@@ -1,0 +1,174 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato region, New Zealand.' } = Astro.props;
+
+const navLinks = [
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About Us' },
+  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Kiwi Paws Home Vet</title>
+  </head>
+  <body class="min-h-screen flex flex-col" style="background-color:#f5f0e4;">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 md:h-20">
+
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 group">
+            <img src="/images/logo.svg" alt="Kiwi Paws Home Vet" class="h-12 md:h-14 w-auto" />
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center gap-1">
+            {navLinks.map(link => (
+              <a
+                href={link.href}
+                class={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${currentPath === link.href ? 'text-[#6b8c5a]' : 'text-[#6b4c2a] hover:text-[#6b8c5a]'}`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <!-- CTA -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="/book" class="btn-primary text-sm">
+              Book a Home Visit
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-[#6b4c2a] hover:bg-[#f5f0e4]" aria-label="Toggle menu">
+            <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[#ede6d4] bg-white">
+        <nav class="max-w-7xl mx-auto px-4 py-3 space-y-1">
+          {navLinks.map(link => (
+            <a href={link.href} class={`block px-3 py-2 rounded-md text-sm font-semibold ${currentPath === link.href ? 'text-[#6b8c5a] bg-[#e8ede4]' : 'text-[#6b4c2a] hover:bg-[#f5f0e4]'}`}>
+              {link.label}
+            </a>
+          ))}
+          <div class="pt-2">
+            <a href="/book" class="btn-primary text-sm w-full justify-center">
+              Book a Home Visit 🐾
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #1e3320; color: #d1d5db;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+          <div class="md:col-span-2">
+            <img src="/images/logo-white.svg" alt="Kiwi Paws Home Vet" class="h-12 w-auto mb-3 opacity-90" />
+            <p class="text-sm leading-relaxed text-gray-400 max-w-xs">
+              Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato region.
+            </p>
+            <div class="flex gap-3 mt-4">
+              <a href="https://www.instagram.com/KiwiPawsHomeVet" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/KiwiPawsHomeVet" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-white mb-3">Quick Links</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="/services" class="hover:text-white transition-colors">Services & Pricing</a></li>
+              <li><a href="/about" class="hover:text-white transition-colors">About Nicole</a></li>
+              <li><a href="/testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/book" class="hover:text-white transition-colors">Book a Visit</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-white mb-3">Contact Us</h3>
+            <address class="not-italic space-y-2 text-sm text-gray-400">
+              <p>
+                <a href="tel:021956242" class="hover:text-white transition-colors">021 956 242</a>
+              </p>
+              <p>
+                <a href="mailto:info@kiwipawshomevet.co.nz" class="hover:text-white transition-colors">info@kiwipawshomevet.co.nz</a>
+              </p>
+              <p>Hamilton &amp; greater Waikato<br/>New Zealand</p>
+              <p class="text-xs text-gray-500 pt-1">Mon–Fri 9am–5pm for calls/texts<br/>Email any time</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="border-t border-[#2d5034] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} Kiwi Paws Home Vet. All rights reserved.</p>
+          <p>Hamilton, New Zealand</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+
+      btn?.addEventListener('click', () => {
+        const isHidden = menu?.classList.contains('hidden');
+        menu?.classList.toggle('hidden', !isHidden);
+        openIcon?.classList.toggle('hidden', !isHidden);
+        closeIcon?.classList.toggle('hidden', isHidden);
+      });
+    </script>
+  </body>
+</html>

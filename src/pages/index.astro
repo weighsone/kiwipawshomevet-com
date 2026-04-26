@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" description="Compassionate, stress-free veterinary care in the comfort of your home. Serving Hamilton and the greater Waikato, New Zealand.">
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden" style="min-height: 520px;">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/69914e60b1210a495133a353/c81be54f-915c-4f8f-82b7-bdd7ab34a4c4/IMG_7678.jpeg"
+        alt="Nicole, veterinarian, caring for a pet at home"
+        class="w-full h-full object-cover object-top"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(44,26,14,0.72) 0%, rgba(44,26,14,0.3) 60%, transparent 100%);"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex items-center" style="min-height: 520px;">
+      <div class="max-w-lg">
+        <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+          Expert Vet Care,<br/>Right in Your Home
+        </h1>
+        <p class="text-lg text-white/90 mb-8 leading-relaxed">
+          Comfortable, stress-free check-ups and care for your beloved pets, anywhere in New Zealand's Waikato region.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/book" class="btn-primary">
+            Book a Home Visit
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="/services" class="btn-outline" style="border-color: white; color: white;">
+            Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="bg-white border-b border-[#ede6d4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <p class="font-bold text-[#6b8c5a] text-xl">10+ years</p>
+          <p class="text-sm text-[#6b4c2a]">Experience</p>
+        </div>
+        <div>
+          <p class="font-bold text-[#6b8c5a] text-xl">Waikato</p>
+          <p class="text-sm text-[#6b4c2a]">Region-wide</p>
+        </div>
+        <div>
+          <p class="font-bold text-[#6b8c5a] text-xl">5 Services</p>
+          <p class="text-sm text-[#6b4c2a]">Comprehensive care</p>
+        </div>
+        <div>
+          <p class="font-bold text-[#6b8c5a] text-xl">Stress-free</p>
+          <p class="text-sm text-[#6b4c2a]">Home visits</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="wood-bg py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading text-white mb-2">Our Services</h2>
+      <p class="text-center text-white/80 mb-10 max-w-xl mx-auto">Professional veterinary care delivered to your door — on your schedule, in your pet's environment.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+        <!-- Routine Consultation -->
+        <div class="bg-white/90 rounded-2xl p-6 text-center shadow-sm">
+          <div class="paw-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+              <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+              <circle cx="20" cy="10" r="2"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Comprehensive Check-ups</h3>
+          <p class="text-sm text-[#6b4c2a] leading-relaxed mb-3">Thorough health assessments with no time pressure — covering senior wellness, chronic disease, dental checks, and more.</p>
+          <p class="font-bold text-[#6b8c5a]">From $150</p>
+        </div>
+
+        <!-- Vaccinations -->
+        <div class="bg-white/90 rounded-2xl p-6 text-center shadow-sm">
+          <div class="paw-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/>
+              <path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Vaccinations &amp; Preventative Care</h3>
+          <p class="text-sm text-[#6b4c2a] leading-relaxed mb-3">Annual vaccines, flea/worm prevention, and health plans tailored to your pet's lifestyle and needs.</p>
+          <p class="font-bold text-[#6b8c5a]">From $40 add-on</p>
+        </div>
+
+        <!-- End-of-Life -->
+        <div class="bg-white/90 rounded-2xl p-6 text-center shadow-sm">
+          <div class="paw-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Compassionate End-of-Life Care</h3>
+          <p class="text-sm text-[#6b4c2a] leading-relaxed mb-3">Peaceful, gentle euthanasia in the comfort of your home, with unhurried support for your whole family.</p>
+          <p class="font-bold text-[#6b8c5a]">From $400</p>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+        <!-- Rechecks -->
+        <div class="bg-white/90 rounded-2xl p-6 text-center shadow-sm">
+          <div class="paw-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Rechecks</h3>
+          <p class="text-sm text-[#6b4c2a] leading-relaxed mb-3">Follow-up visits to monitor progress and adjust treatment plans as needed.</p>
+          <p class="font-bold text-[#6b8c5a]">$120</p>
+        </div>
+
+        <!-- Telemedicine -->
+        <div class="bg-white/90 rounded-2xl p-6 text-center shadow-sm">
+          <div class="paw-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Telemedicine</h3>
+          <p class="text-sm text-[#6b4c2a] leading-relaxed mb-3">Remote consultations for ongoing management or prescription updates — from the comfort of your home.</p>
+          <p class="font-bold text-[#6b8c5a]">$80</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/services" class="btn-primary" style="background-color: white; color: #6b8c5a;">
+          View All Services &amp; Pricing
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 md:py-20" style="background-color: #f5f0e4;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/69914e60b1210a495133a353/8e867c82-bd46-4b50-a330-c0cd0adbeead/IMG_2742.jpeg"
+            alt="Nicole, Kiwi Paws Home Vet veterinarian"
+            class="w-full rounded-2xl shadow-lg object-cover"
+            style="max-height: 480px;"
+          />
+        </div>
+        <div>
+          <p class="text-[#6b8c5a] font-semibold uppercase tracking-wide text-sm mb-2">About Us</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#2c1a0e] mb-4 leading-tight" style="font-family: 'Playfair Display', Georgia, serif;">
+            Compassionate, Personalised Vet Care
+          </h2>
+          <p class="text-[#6b4c2a] leading-relaxed mb-4">
+            Nicole is a companion animal veterinarian with over 10 years of experience. She is passionate about creating calm, positive experiences for pets and their families — focusing on preventative care plans tailored to each individual animal.
+          </p>
+          <p class="text-[#6b4c2a] leading-relaxed mb-6">
+            By bringing veterinary care directly to your home, Nicole removes the stress of clinic visits for anxious pets, making check-ups a positive experience for everyone. When she's not working, she spends time with her daughter and her large white cat, Professor Dumbledore.
+          </p>
+          <ul class="space-y-2 mb-8">
+            {[
+              'No time limits on consultations',
+              'Tailored preventative care plans',
+              'Calm, low-stress environment for your pet',
+              'Pet insurance claims supported',
+            ].map(item => (
+              <li class="flex items-start gap-2 text-[#6b4c2a]">
+                <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a href="/about" class="btn-primary">
+            Learn More About Nicole
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-heading mb-2">Client Testimonials</h2>
+      <p class="text-center text-[#6b4c2a] mb-10 max-w-xl mx-auto">Hear what Waikato pet owners are saying about Kiwi Paws Home Vet.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            quote: "Nicole was absolutely amazing with our anxious cat. The home visit removed all the stress of a clinic trip — she was calm, thorough, and so kind.",
+            author: "Sarah L.",
+            pet: "Cat owner, Hamilton"
+          },
+          {
+            quote: "Having the vet come to us was so much less stressful for our old dog Buster. Nicole was professional, gentle, and so convenient. Highly recommend!",
+            author: "Mark T.",
+            pet: "Dog owner, Cambridge"
+          },
+          {
+            quote: "We were so grateful for the gentle and compassionate care Nicole provided for our old girl. She made an incredibly difficult time much easier for our family.",
+            author: "The Wilson Family",
+            pet: "Dog owners, Hamilton"
+          }
+        ].map(t => (
+          <div class="bg-[#f5f0e4] rounded-2xl p-6">
+            <div class="flex gap-1 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#6b8c5a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              ))}
+            </div>
+            <blockquote class="text-[#6b4c2a] text-sm leading-relaxed mb-4 italic">"{t.quote}"</blockquote>
+            <div>
+              <p class="font-semibold text-[#2c1a0e] text-sm">{t.author}</p>
+              <p class="text-[#6b4c2a] text-xs">{t.pet}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/testimonials" class="btn-outline">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-14 md:py-16" style="background-color: #6b8c5a;">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+        Ready to Book a Home Visit?
+      </h2>
+      <p class="text-white/90 text-lg mb-8 max-w-xl mx-auto">
+        Contact Nicole today and give your pet the stress-free care they deserve — right in the comfort of home.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">
+          Book Now
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:021956242" class="btn-outline" style="border-color: white; color: white;">
+          Call 021 956 242
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact info strip -->
+  <section class="py-10 bg-white border-t border-[#ede6d4]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-[#2c1a0e]">Call or Text</p>
+            <a href="tel:021956242" class="text-[#6b8c5a] hover:underline">021 956 242</a>
+            <p class="text-xs text-[#6b4c2a]">Mon–Fri 9am–5pm</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-[#2c1a0e]">Email Us</p>
+            <a href="mailto:info@kiwipawshomevet.co.nz" class="text-[#6b8c5a] hover:underline text-sm">info@kiwipawshomevet.co.nz</a>
+            <p class="text-xs text-[#6b4c2a]">Any time</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-[#2c1a0e]">Service Area</p>
+            <p class="text-[#6b8c5a]">Hamilton &amp; Waikato</p>
+            <p class="text-xs text-[#6b4c2a]">New Zealand</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

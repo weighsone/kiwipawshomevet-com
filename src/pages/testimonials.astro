@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  {
+    quote: "Nicole was absolutely amazing with our anxious cat. The home visit removed all the stress of a clinic trip — she was calm, thorough, and so kind. Our cat was completely relaxed and I got to ask all my questions without feeling rushed.",
+    author: "Sarah L.",
+    pet: "Cat owner, Hamilton",
+    service: "Routine Consultation"
+  },
+  {
+    quote: "Having the vet come to us was so much less stressful for our old dog Buster. Nicole was professional, gentle, and so convenient. She spent a good amount of time checking him over and explained everything clearly. Highly recommend!",
+    author: "Mark T.",
+    pet: "Dog owner, Cambridge",
+    service: "Senior Wellness"
+  },
+  {
+    quote: "We were so grateful for the gentle and compassionate care Nicole provided for our old girl. She made an incredibly difficult time much easier for our family — there's no other way I'd want to say goodbye to a pet.",
+    author: "The Wilson Family",
+    pet: "Dog owners, Hamilton",
+    service: "End-of-Life Care"
+  },
+  {
+    quote: "I have three cats, two of whom refuse to go in a carrier without serious drama. Having Nicole come to us has transformed the vet experience. All three were calm and she handled them all so gently.",
+    author: "Jo M.",
+    pet: "Multi-cat household, Raglan",
+    service: "Routine Consultation"
+  },
+  {
+    quote: "The telemedicine option is brilliant for prescription renewals. Nicole is so easy to talk to and really knows our dog's history. It saves us so much time.",
+    author: "Tom & Ange R.",
+    pet: "Dog owners, Te Awamutu",
+    service: "Telemedicine"
+  },
+  {
+    quote: "Nicole vaccinated all our pets in one visit — such a relief not to have to drive to a clinic multiple times. She was efficient but also very thorough and gentle. Will definitely use Kiwi Paws again.",
+    author: "Claire S.",
+    pet: "Pet owner, Hamilton",
+    service: "Vaccinations"
+  },
+];
+---
+
+<Layout title="Testimonials" description="Read what Waikato pet owners say about Kiwi Paws Home Vet — compassionate, stress-free home vet visits in Hamilton and beyond.">
+
+  <!-- Header -->
+  <div class="wood-bg py-16 md:py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+        Client Testimonials
+      </h1>
+      <p class="text-white/85 text-lg">What Waikato pet owners are saying about Kiwi Paws Home Vet</p>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="py-16 md:py-20" style="background-color: #f5f0e4;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {testimonials.map(t => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#6b8c5a" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              ))}
+            </div>
+            <blockquote class="text-[#6b4c2a] text-sm leading-relaxed mb-4 flex-grow italic">
+              "{t.quote}"
+            </blockquote>
+            <div class="border-t border-[#ede6d4] pt-4">
+              <p class="font-semibold text-[#2c1a0e] text-sm">{t.author}</p>
+              <p class="text-[#6b8c5a] text-xs">{t.pet}</p>
+              <span class="inline-block mt-2 bg-[#e8ede4] text-[#6b8c5a] text-xs font-medium px-2 py-0.5 rounded-full">{t.service}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Review prompt -->
+      <div class="bg-white rounded-2xl p-8 text-center shadow-sm max-w-2xl mx-auto">
+        <div class="paw-icon mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">
+          Had a visit with Nicole?
+        </h2>
+        <p class="text-[#6b4c2a] mb-5 text-sm">We'd love to hear about your experience. Your feedback helps other Waikato pet owners find stress-free vet care for their animals.</p>
+        <a
+          href="https://www.instagram.com/KiwiPawsHomeVet"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Share on Instagram @KiwiPawsHomeVet
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 text-center" style="background-color: #6b8c5a;">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-3" style="font-family: 'Playfair Display', Georgia, serif;">
+        Experience the difference yourself
+      </h2>
+      <p class="text-white/90 mb-6">Join our growing list of happy Waikato clients.</p>
+      <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
+    </div>
+  </section>
+
+</Layout>

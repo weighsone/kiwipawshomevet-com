@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    name: 'Routine Consultation',
+    price: '$150',
+    additionalPets: '+$100 per additional pet',
+    prescriptionFee: '$25 prescription fee',
+    icon: 'stethoscope',
+    description: 'A thorough assessment of your animal with no time limits. Nicole takes the time to really get to know your pet and address all your concerns.',
+    includes: [
+      'Comprehensive physical health check',
+      'Senior wellness assessment',
+      'Puppy and kitten care',
+      'Chronic disease management',
+      'Dental checks and advice',
+      'Prescription reviews',
+      'Pain management assessment',
+      'Personalised preventative care plan',
+    ]
+  },
+  {
+    name: 'Vaccinations & Preventative Care',
+    price: 'From $40',
+    note: 'As add-on to consultation',
+    icon: 'syringe',
+    description: 'Keep your pet protected with up-to-date vaccinations and a tailored preventative health plan.',
+    includes: [
+      'Vanguard 5 (dogs) — $40',
+      'Leptospirosis vaccine — $40',
+      'Kennel cough vaccine — $40',
+      'Felocell 3 (cats) — $40',
+      'FIV vaccine (pre-order required)',
+      'Rabbit vaccine (pre-order required)',
+      'Flea, tick & worm prevention',
+      'Lifestyle-based health planning',
+    ]
+  },
+  {
+    name: 'Rechecks',
+    price: '$120',
+    icon: 'repeat',
+    description: 'Follow-up visits to monitor your pet\'s progress and adjust treatment plans as needed.',
+    includes: [
+      'Review of current treatment effectiveness',
+      'Medication adjustments if needed',
+      'Ongoing condition monitoring',
+      'Progress updates and next steps',
+    ]
+  },
+  {
+    name: 'Telemedicine',
+    price: '$80',
+    icon: 'phone',
+    description: 'Remote video consultations for convenient ongoing care and prescription management.',
+    note: 'Not suitable for initial consultations.',
+    includes: [
+      'Ongoing condition management',
+      'Prescription renewals and reviews',
+      'Post-visit follow-up',
+      'General advice and guidance',
+    ]
+  },
+  {
+    name: 'Compassionate End-of-Life Care',
+    price: 'From $400',
+    icon: 'heart',
+    description: 'Peaceful, gentle euthanasia in the comfort of your own home — with an unhurried, caring approach for your pet and your family.',
+    pricing: [
+      'Cats & small dogs (up to 10kg) — $400',
+      'Medium dogs (10–20kg) — $430',
+      'Large dogs (20–40kg) — $460',
+      'Giant dogs (over 40kg) — $500',
+    ],
+    includes: [
+      'Pre-visit phone consultation',
+      'Gentle, peaceful procedure',
+      'Time for family to say goodbye',
+      'Aftercare guidance and referrals',
+    ]
+  }
+];
+---
+
+<Layout title="Services & Pricing" description="View all Kiwi Paws Home Vet services and pricing. Home vet visits in Hamilton and the greater Waikato region.">
+
+  <!-- Page Header -->
+  <div class="wood-bg py-16 md:py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+        Services &amp; Pricing
+      </h1>
+      <p class="text-white/85 text-lg max-w-xl mx-auto">
+        Transparent pricing with no hidden fees. All visits are to your home — no clinic trip required.
+      </p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="py-16 md:py-20" style="background-color: #f5f0e4;">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      {services.map((s, i) => (
+        <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-3">
+            <!-- Left: price -->
+            <div class="wood-bg p-8 flex flex-col items-center justify-center text-center">
+              <p class="text-3xl font-bold text-white mb-1" style="font-family: 'Playfair Display', Georgia, serif;">{s.price}</p>
+              {s.note && <p class="text-white/75 text-sm">{s.note}</p>}
+              {s.additionalPets && <p class="text-white/75 text-xs mt-1">{s.additionalPets}</p>}
+              {s.prescriptionFee && <p class="text-white/75 text-xs">{s.prescriptionFee}</p>}
+              <a href="/book" class="btn-primary mt-6 text-sm" style="background-color: white; color: #6b8c5a;">
+                Book This
+              </a>
+            </div>
+            <!-- Right: details -->
+            <div class="p-8 md:col-span-2">
+              <h2 class="text-2xl font-bold text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">{s.name}</h2>
+              <p class="text-[#6b4c2a] leading-relaxed mb-4">{s.description}</p>
+
+              {s.pricing && (
+                <div class="mb-4">
+                  <p class="font-semibold text-[#2c1a0e] text-sm mb-2">Pricing by pet size:</p>
+                  <ul class="space-y-1">
+                    {s.pricing.map(p => (
+                      <li class="text-sm text-[#6b4c2a] flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#6b8c5a] rounded-full shrink-0"></span>
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div>
+                <p class="font-semibold text-[#2c1a0e] text-sm mb-2">What's included:</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                  {s.includes.map(item => (
+                    <li class="text-sm text-[#6b4c2a] flex items-start gap-2">
+                      <svg class="mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+  <!-- Add-ons -->
+  <section class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-[#2c1a0e] mb-6 text-center" style="font-family: 'Playfair Display', Georgia, serif;">Additional Add-ons Available</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {['Blood tests', 'Therapeutic injections', 'Lab sample collection', 'Blood pressure monitoring', 'Microchipping', 'Flea & parasite treatments', 'Nail trims', 'Anal gland expression'].map(item => (
+          <div class="bg-[#f5f0e4] rounded-xl p-4 text-center">
+            <p class="text-sm font-medium text-[#6b4c2a]">{item}</p>
+            <p class="text-xs text-[#6b8c5a] mt-1">Ask for pricing</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies -->
+  <section class="py-12" style="background-color: #f5f0e4;">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-[#2c1a0e] mb-6 text-center" style="font-family: 'Playfair Display', Georgia, serif;">Good to Know</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          { title: 'Payment', body: 'EFTPOS or bank transfer on the day of visit.' },
+          { title: 'Pet Insurance', body: 'We support pet insurance — claim directly with your provider.' },
+          { title: 'Booking Hours', body: 'Call or text 9am–5pm Mon–Fri. Email any time.' },
+          { title: 'Not an Emergency Service', body: 'For emergencies please contact your nearest emergency vet clinic.' },
+          { title: 'Referrals', body: 'Referrals available for surgeries and advanced diagnostics.' },
+          { title: 'Service Area', body: 'Hamilton and the greater Waikato region.' },
+        ].map(p => (
+          <div class="bg-white rounded-xl p-5">
+            <p class="font-semibold text-[#2c1a0e] mb-1">{p.title}</p>
+            <p class="text-sm text-[#6b4c2a]">{p.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 text-center" style="background-color: #6b8c5a;">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-3" style="font-family: 'Playfair Display', Georgia, serif;">Ready to get started?</h2>
+      <p class="text-white/90 mb-6">Book a home visit or get in touch with any questions.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="/book" class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
+        <a href="/contact" class="btn-outline" style="border-color: white; color: white;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
