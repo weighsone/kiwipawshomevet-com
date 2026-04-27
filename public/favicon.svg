@@ -1,16 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="12" fill="#6b8c5a"/>
-  <!-- Kiwi body -->
-  <ellipse cx="28" cy="40" rx="16" ry="12" fill="white" fill-opacity="0.9"/>
-  <!-- Kiwi head -->
-  <circle cx="40" cy="28" r="8" fill="white" fill-opacity="0.9"/>
-  <!-- Beak -->
-  <path d="M46 27 Q56 25 57 28 Q56 31 46 29 Z" fill="#c4a87a"/>
-  <!-- Eye -->
-  <circle cx="44" cy="26" r="1.5" fill="#2c1a0e"/>
-  <!-- Paw print on body -->
-  <circle cx="24" cy="40" r="3.5" fill="#6b8c5a" fill-opacity="0.45"/>
-  <circle cx="20" cy="36" r="1.5" fill="#6b8c5a" fill-opacity="0.45"/>
-  <circle cx="24" cy="35" r="1.5" fill="#6b8c5a" fill-opacity="0.45"/>
-  <circle cx="28" cy="36" r="1.5" fill="#6b8c5a" fill-opacity="0.45"/>
+  <rect width="64" height="64" rx="12" fill="#F5F5F0"/>
+  <!-- Toe pads -->
+  <ellipse cx="10" cy="20" rx="6" ry="7.5" fill="#D4AF37" transform="rotate(-25,10,20)"/>
+  <ellipse cx="22" cy="12" rx="6" ry="7.5" fill="#4A7337" transform="rotate(-8,22,12)"/>
+  <ellipse cx="36" cy="12" rx="6" ry="7.5" fill="#4A7337" transform="rotate(8,36,12)"/>
+  <ellipse cx="48" cy="20" rx="6" ry="7.5" fill="#D4AF37" transform="rotate(25,48,20)"/>
+  <!-- Main pad -->
+  <path d="M8 51 Q5 38 10 29 Q17 20 29 20 Q41 20 47 29 Q52 38 49 51 Q43 60 29 61 Q15 60 8 51 Z" fill="#4A7337"/>
+  <!-- Kiwi white silhouette -->
+  <ellipse cx="31" cy="43" rx="12" ry="10" fill="white"/>
+  <circle cx="18" cy="36" r="6" fill="white"/>
+  <path d="M13 34 L4 31 L13 39 Z" fill="white"/>
+  <path d="M42 42 Q47 38 46 45 Q44 49 41 47 Z" fill="white"/>
 </svg>

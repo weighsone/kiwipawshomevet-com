@@ -9,21 +9,21 @@ const u = (path: string) => `${base}${path}`;
   <!-- Header -->
   <div class="wood-bg py-16 md:py-20 text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">
         Book a Home Visit
       </h1>
       <p class="text-white/85 text-lg">Tell us about your pet and we'll be in touch to confirm your appointment.</p>
     </div>
   </div>
 
-  <section class="py-16 md:py-20" style="background-color: #f5f0e4;">
+  <section class="py-16 md:py-20" style="background-color: #F5F5F0;">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
         <!-- Sidebar info -->
         <div class="space-y-6">
           <div class="bg-white rounded-2xl p-6 shadow-sm">
-            <h3 class="font-bold text-[#2c1a0e] mb-4" style="font-family: 'Playfair Display', Georgia, serif;">What to Expect</h3>
+            <h3 class="font-bold text-[#1a2e12] mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What to Expect</h3>
             <ol class="space-y-3">
               {[
                 'Fill in the booking form',
@@ -31,8 +31,8 @@ const u = (path: string) => `${base}${path}`;
                 'Vet visits your home at the agreed time',
                 'Pay by EFTPOS or bank transfer on the day',
               ].map((step, i) => (
-                <li class="flex items-start gap-3 text-sm text-[#6b4c2a]">
-                  <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5" style="background-color: #6b8c5a;">{i + 1}</span>
+                <li class="flex items-start gap-3 text-sm text-[#5a3d1e]">
+                  <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5" style="background-color: #4A7337;">{i + 1}</span>
                   {step}
                 </li>
               ))}
@@ -40,25 +40,25 @@ const u = (path: string) => `${base}${path}`;
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-sm">
-            <h3 class="font-bold text-[#2c1a0e] mb-3" style="font-family: 'Playfair Display', Georgia, serif;">Quick Pricing</h3>
-            <ul class="space-y-2 text-sm text-[#6b4c2a]">
-              <li class="flex justify-between"><span>Routine Consultation</span><span class="font-semibold text-[#6b8c5a]">$150</span></li>
-              <li class="flex justify-between"><span>Additional pet</span><span class="font-semibold text-[#6b8c5a]">+$100</span></li>
-              <li class="flex justify-between"><span>Recheck</span><span class="font-semibold text-[#6b8c5a]">$120</span></li>
-              <li class="flex justify-between"><span>Telemedicine</span><span class="font-semibold text-[#6b8c5a]">$80</span></li>
-              <li class="flex justify-between"><span>Vaccinations (add-on)</span><span class="font-semibold text-[#6b8c5a]">from $40</span></li>
-              <li class="flex justify-between"><span>End-of-life care</span><span class="font-semibold text-[#6b8c5a]">from $400</span></li>
+            <h3 class="font-bold text-[#1a2e12] mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Quick Pricing</h3>
+            <ul class="space-y-2 text-sm text-[#5a3d1e]">
+              <li class="flex justify-between"><span>Routine Consultation</span><span class="font-semibold text-[#4A7337]">$150</span></li>
+              <li class="flex justify-between"><span>Additional pet</span><span class="font-semibold text-[#4A7337]">+$100</span></li>
+              <li class="flex justify-between"><span>Recheck</span><span class="font-semibold text-[#4A7337]">$120</span></li>
+              <li class="flex justify-between"><span>Telemedicine</span><span class="font-semibold text-[#4A7337]">$80</span></li>
+              <li class="flex justify-between"><span>Vaccinations (add-on)</span><span class="font-semibold text-[#4A7337]">from $40</span></li>
+              <li class="flex justify-between"><span>End-of-life care</span><span class="font-semibold text-[#4A7337]">from $400</span></li>
             </ul>
-            <a href={u("/services")} class="text-[#6b8c5a] text-xs hover:underline mt-3 block">View full pricing →</a>
+            <a href={u("/services")} class="text-[#4A7337] text-xs hover:underline mt-3 block">View full pricing →</a>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-sm">
-            <h3 class="font-bold text-[#2c1a0e] mb-3" style="font-family: 'Playfair Display', Georgia, serif;">Prefer to Call?</h3>
-            <p class="text-sm text-[#6b4c2a] mb-3">Call or text Nicole directly to book.</p>
+            <h3 class="font-bold text-[#1a2e12] mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Prefer to Call?</h3>
+            <p class="text-sm text-[#5a3d1e] mb-3">Call or text Nicole directly to book.</p>
             <a href="tel:021956242" class="btn-primary text-sm w-full justify-center">
               021 956 242
             </a>
-            <p class="text-xs text-[#6b4c2a] mt-2 text-center">Mon–Fri 9am–5pm</p>
+            <p class="text-xs text-[#5a3d1e] mt-2 text-center">Mon–Fri 9am–5pm</p>
           </div>
 
           <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
@@ -70,8 +70,8 @@ const u = (path: string) => `${base}${path}`;
         <!-- Booking Form -->
         <div class="lg:col-span-2">
           <div class="bg-white rounded-2xl shadow-sm p-8">
-            <h2 class="text-2xl font-bold text-[#2c1a0e] mb-2" style="font-family: 'Playfair Display', Georgia, serif;">Booking Request</h2>
-            <p class="text-[#6b4c2a] text-sm mb-6">Complete the form below and Nicole will confirm your appointment within 24 hours.</p>
+            <h2 class="text-2xl font-bold text-[#1a2e12] mb-2" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Booking Request</h2>
+            <p class="text-[#5a3d1e] text-sm mb-6">Complete the form below and Nicole will confirm your appointment within 24 hours.</p>
 
             <form
               action="https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID"
@@ -84,7 +84,7 @@ const u = (path: string) => `${base}${path}`;
 
               <!-- Owner details -->
               <div>
-                <h3 class="font-semibold text-[#2c1a0e] text-sm uppercase tracking-wide mb-3">Your Details</h3>
+                <h3 class="font-semibold text-[#1a2e12] text-sm uppercase tracking-wide mb-3">Your Details</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label for="owner-name" class="form-label">Full Name <span class="text-red-500">*</span></label>
@@ -108,8 +108,8 @@ const u = (path: string) => `${base}${path}`;
               </div>
 
               <!-- Pet details -->
-              <div class="border-t border-[#ede6d4] pt-5">
-                <h3 class="font-semibold text-[#2c1a0e] text-sm uppercase tracking-wide mb-3">Pet Details</h3>
+              <div class="border-t border-[#e5e5de] pt-5">
+                <h3 class="font-semibold text-[#1a2e12] text-sm uppercase tracking-wide mb-3">Pet Details</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label for="pet-name" class="form-label">Pet's Name <span class="text-red-500">*</span></label>
@@ -137,8 +137,8 @@ const u = (path: string) => `${base}${path}`;
               </div>
 
               <!-- Service -->
-              <div class="border-t border-[#ede6d4] pt-5">
-                <h3 class="font-semibold text-[#2c1a0e] text-sm uppercase tracking-wide mb-3">Appointment Details</h3>
+              <div class="border-t border-[#e5e5de] pt-5">
+                <h3 class="font-semibold text-[#1a2e12] text-sm uppercase tracking-wide mb-3">Appointment Details</h3>
                 <div class="mb-4">
                   <label for="service" class="form-label">Service Required <span class="text-red-500">*</span></label>
                   <select id="service" name="service" required class="form-input">
@@ -197,7 +197,7 @@ const u = (path: string) => `${base}${path}`;
                 Request Appointment
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </button>
-              <p class="text-xs text-center text-[#6b4c2a]">We'll confirm availability and call to finalise your booking.</p>
+              <p class="text-xs text-center text-[#5a3d1e]">We'll confirm availability and call to finalise your booking.</p>
             </form>
           </div>
         </div>

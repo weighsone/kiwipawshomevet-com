@@ -30,10 +30,10 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title} | Kiwi Paws Home Vet</title>
   </head>
-  <body class="min-h-screen flex flex-col" style="background-color:#f5f0e4;">
+  <body class="min-h-screen flex flex-col" style="background-color:#F5F5F0;">
 
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
             {navLinks.map(link => (
               <a
                 href={link.href}
-                class={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${currentPath === link.href ? 'text-[#6b8c5a]' : 'text-[#6b4c2a] hover:text-[#6b8c5a]'}`}
+                class={`px-4 py-2 rounded-md text-sm font-semibold transition-colors ${currentPath === link.href ? 'text-[#4A7337]' : 'text-[#1a2e12] hover:text-[#4A7337]'}`}
               >
                 {link.label}
               </a>
@@ -69,7 +69,7 @@ const currentPath = Astro.url.pathname;
           </div>
 
           <!-- Mobile menu button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-[#6b4c2a] hover:bg-[#f5f0e4]" aria-label="Toggle menu">
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-[#1a2e12] hover:bg-[#e8f0e5]" aria-label="Toggle menu">
             <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -81,10 +81,10 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <!-- Mobile Nav -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-[#ede6d4] bg-white">
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[#e5e5de] bg-white">
         <nav class="max-w-7xl mx-auto px-4 py-3 space-y-1">
           {navLinks.map(link => (
-            <a href={link.href} class={`block px-3 py-2 rounded-md text-sm font-semibold ${currentPath === link.href ? 'text-[#6b8c5a] bg-[#e8ede4]' : 'text-[#6b4c2a] hover:bg-[#f5f0e4]'}`}>
+            <a href={link.href} class={`block px-3 py-2 rounded-md text-sm font-semibold ${currentPath === link.href ? 'text-[#4A7337] bg-[#e8f0e5]' : 'text-[#1a2e12] hover:bg-[#e8f0e5]'}`}>
               {link.label}
             </a>
           ))}
@@ -103,7 +103,7 @@ const currentPath = Astro.url.pathname;
     </main>
 
     <!-- Footer -->
-    <footer style="background-color: #1e3320; color: #d1d5db;">
+    <footer style="background-color: #1a2e12; color: #d1d5db;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
@@ -131,7 +131,7 @@ const currentPath = Astro.url.pathname;
             <ul class="space-y-2 text-sm text-gray-400">
               <li><a href={u('/')} class="hover:text-white transition-colors">Home</a></li>
               <li><a href={u('/services')} class="hover:text-white transition-colors">Services & Pricing</a></li>
-              <li><a href={u('/about')} class="hover:text-white transition-colors">About Nicole</a></li>
+              <li><a href={u('/about')} class="hover:text-white transition-colors">About Dr Nicole</a></li>
               <li><a href={u('/testimonials')} class="hover:text-white transition-colors">Testimonials</a></li>
               <li><a href={u('/contact')} class="hover:text-white transition-colors">Contact</a></li>
               <li><a href={u('/book')} class="hover:text-white transition-colors">Book a Visit</a></li>
@@ -153,7 +153,7 @@ const currentPath = Astro.url.pathname;
           </div>
         </div>
 
-        <div class="border-t border-[#2d5034] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
+        <div class="border-t border-[#1e3d18] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Kiwi Paws Home Vet. All rights reserved.</p>
           <p>Hamilton, New Zealand</p>
         </div>

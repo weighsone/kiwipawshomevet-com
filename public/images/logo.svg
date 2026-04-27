@@ -1,26 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
-  <!-- Kiwi bird body -->
-  <ellipse cx="28" cy="35" rx="18" ry="14" fill="#6b8c5a"/>
-  <!-- Kiwi head -->
-  <circle cx="42" cy="25" r="9" fill="#6b8c5a"/>
-  <!-- Kiwi beak -->
-  <path d="M49 24 Q62 22 63 25 Q62 28 49 26 Z" fill="#c4a87a"/>
-  <!-- Kiwi eye -->
-  <circle cx="47" cy="23" r="1.5" fill="white"/>
-  <circle cx="47.5" cy="23" r="0.7" fill="#2c1a0e"/>
-  <!-- Kiwi legs -->
-  <line x1="22" y1="48" x2="20" y2="56" stroke="#c4a87a" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="30" y1="49" x2="32" y2="56" stroke="#c4a87a" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Feet -->
-  <path d="M18 56 L20 56 L22 54" stroke="#c4a87a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M30 56 L32 56 L34 54" stroke="#c4a87a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <!-- Paw print on body -->
-  <circle cx="24" cy="35" r="3.5" fill="rgba(255,255,255,0.35)"/>
-  <circle cx="20" cy="31" r="1.5" fill="rgba(255,255,255,0.35)"/>
-  <circle cx="24" cy="30" r="1.5" fill="rgba(255,255,255,0.35)"/>
-  <circle cx="28" cy="31" r="1.5" fill="rgba(255,255,255,0.35)"/>
-  <!-- Text: Kiwi Paws -->
-  <text x="72" y="26" font-family="Playfair Display, Georgia, serif" font-size="18" font-weight="700" fill="#2c1a0e">Kiwi Paws</text>
-  <!-- Text: Home Vet -->
-  <text x="72" y="45" font-family="Nunito, Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#6b8c5a">Home Vet</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" width="260" height="68">
+  <!-- Paw icon: 60x66 at left -->
+  <!-- Toe pads: outer 2 gold, inner 2 green -->
+  <ellipse cx="10" cy="22" rx="8" ry="10" fill="#D4AF37" transform="rotate(-25,10,22)"/>
+  <ellipse cx="23" cy="12" rx="8" ry="10" fill="#4A7337" transform="rotate(-8,23,12)"/>
+  <ellipse cx="38" cy="12" rx="8" ry="10" fill="#4A7337" transform="rotate(8,38,12)"/>
+  <ellipse cx="51" cy="22" rx="8" ry="10" fill="#D4AF37" transform="rotate(25,51,22)"/>
+  <!-- Main pad -->
+  <path d="M8 55 Q4 40 10 30 Q18 20 30.5 20 Q43 20 50 30 Q56 40 52 55 Q46 66 30.5 67 Q15 66 8 55 Z" fill="#4A7337"/>
+  <!-- Kiwi silhouette (white) inside main pad -->
+  <!-- Body: oval -->
+  <ellipse cx="33" cy="47" rx="14" ry="12" fill="white"/>
+  <!-- Head: circle -->
+  <circle cx="18" cy="39" r="7" fill="white"/>
+  <!-- Beak: long thin pointing left -->
+  <path d="M12 37 L2 34 L12 41 Z" fill="white"/>
+  <!-- Tail: small bump right -->
+  <path d="M46 46 Q52 42 50 50 Q48 54 44 52 Z" fill="white"/>
+  <!-- Leg stubs -->
+  <rect x="27" y="58" width="3" height="5" rx="1.5" fill="white"/>
+  <rect x="35" y="58" width="3" height="5" rx="1.5" fill="white"/>
+
+  <!-- "Kiwi Paws" text -->
+  <text x="74" y="32" font-family="Poppins, sans-serif" font-size="22" font-weight="700" fill="#1a2e12" letter-spacing="0.3">Kiwi Paws</text>
+  <!-- "Home Vet" text -->
+  <text x="74" y="54" font-family="Poppins, sans-serif" font-size="15" font-weight="500" fill="#4A7337" letter-spacing="2.5">Home Vet</text>
 </svg>

@@ -4,124 +4,145 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const u = (path: string) => `${base}${path}`;
 ---
 
-<Layout title="About Nicole" description="Meet Nicole, Kiwi Paws Home Vet's passionate veterinarian with over 10 years of experience in companion animal care across Hamilton and Waikato, NZ.">
+<Layout title="About Dr Nicole Hunwick" description="Meet Dr Nicole Hunwick — a local small animal vet with 10 years' experience bringing stress-free care to your pet's doorstep in Hamilton and the Waikato.">
 
   <!-- Header -->
   <div class="wood-bg py-16 md:py-20 text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
-        About Nicole
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        About Dr Nicole
       </h1>
-      <p class="text-white/85 text-lg">Your dedicated home veterinarian in Hamilton &amp; the Waikato</p>
+      <p class="text-white/85 text-lg font-medium">Veterinarian · Home Care Vet · Waikato</p>
     </div>
   </div>
 
   <!-- Main About -->
-  <section class="py-16 md:py-20" style="background-color: #f5f0e4;">
+  <section class="py-16 md:py-20" style="background-color: #F5F5F0;">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-        <div>
+        <div class="relative">
           <img
             src="https://images.squarespace-cdn.com/content/v1/69914e60b1210a495133a353/8e867c82-bd46-4b50-a330-c0cd0adbeead/IMG_2742.jpeg"
-            alt="Nicole, veterinarian at Kiwi Paws Home Vet"
-            class="w-full rounded-2xl shadow-lg object-cover"
+            alt="Dr Nicole Hunwick, Kiwi Paws Home Vet"
+            class="w-full rounded-2xl shadow-lg object-cover object-top"
             style="max-height: 520px;"
           />
+          <div class="absolute -bottom-4 -right-4 rounded-xl px-5 py-3 shadow-lg hidden md:block" style="background-color:#D4AF37;">
+            <p class="font-bold text-[#1a2e12] text-sm leading-tight">10 years'</p>
+            <p class="text-[#1a2e12] text-xs">experience</p>
+          </div>
         </div>
+
         <div>
-          <p class="text-[#6b8c5a] font-semibold uppercase tracking-wide text-sm mb-2">Meet Your Vet</p>
-          <h2 class="text-3xl font-bold text-[#2c1a0e] mb-5" style="font-family: 'Playfair Display', Georgia, serif;">
-            Nicole — Companion Animal Veterinarian
+          <p class="text-[#4A7337] font-semibold uppercase tracking-widest text-xs mb-3">Meet your vet</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1a2e12] mb-5 leading-tight">
+            Dr Nicole Hunwick
           </h2>
-          <p class="text-[#6b4c2a] leading-relaxed mb-4">
-            Nicole is a companion animal veterinarian with over 10 years of experience. She is deeply passionate about creating calm, positive veterinary experiences for pets and their families.
+
+          <p class="text-[#5a3d1e] leading-relaxed mb-4 text-lg">
+            Hi, I'm Dr Nicole Hunwick — a local small animal vet with 10 years' experience caring for much-loved pets.
           </p>
-          <p class="text-[#6b4c2a] leading-relaxed mb-4">
-            After years of working in busy clinical environments, Nicole noticed how stressful traditional vet visits could be for many animals — particularly anxious dogs, cats who hate carriers, and elderly pets for whom travel is difficult. She founded Kiwi Paws Home Vet to solve this: bringing professional, thorough care directly to pets in their own homes.
+          <p class="text-[#5a3d1e] leading-relaxed mb-4">
+            I'm passionate about providing calm, thorough care in the comfort of your pet's own surroundings, while making sure you feel fully informed and supported every step of the way.
           </p>
-          <p class="text-[#6b4c2a] leading-relaxed mb-6">
-            Nicole focuses on preventative care plans tailored to each individual animal, taking the time to truly understand your pet's health history, lifestyle, and needs. When she's not working, she spends time with her daughter and her beloved large white cat, Professor Dumbledore.
+          <p class="text-[#5a3d1e] leading-relaxed mb-6">
+            Vet visits can be stressful for both pets and their people, and I'm here to help make the experience as gentle as possible.
           </p>
 
-          <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-white rounded-xl p-4 text-center">
-              <p class="text-2xl font-bold text-[#6b8c5a]" style="font-family: 'Playfair Display', Georgia, serif;">10+</p>
-              <p class="text-sm text-[#6b4c2a]">Years experience</p>
-            </div>
-            <div class="bg-white rounded-xl p-4 text-center">
-              <p class="text-2xl font-bold text-[#6b8c5a]" style="font-family: 'Playfair Display', Georgia, serif;">Waikato</p>
-              <p class="text-sm text-[#6b4c2a]">Region-wide service</p>
-            </div>
+          <div class="flex flex-wrap gap-2 mb-8">
+            {['Veterinarian', 'Home Care Vet', 'Small Animal', 'Waikato Based'].map(tag => (
+              <span class="bg-[#e8f0e5] text-[#4A7337] text-xs font-semibold px-3 py-1 rounded-full">{tag}</span>
+            ))}
           </div>
 
-          <a href={u("/book")} class="btn-primary">Book a Home Visit</a>
+          <a href={u('/book')} class="btn-primary">Book a Home Visit</a>
         </div>
       </div>
 
-      <!-- Philosophy -->
-      <div class="bg-white rounded-2xl p-8 md:p-12 mb-12">
-        <h2 class="text-2xl font-bold text-[#2c1a0e] mb-6 text-center" style="font-family: 'Playfair Display', Georgia, serif;">
-          Our Care Philosophy
+      <!-- What I do -->
+      <div class="bg-white rounded-2xl p-8 md:p-12 mb-12 shadow-sm">
+        <p class="text-[#4A7337] font-semibold uppercase tracking-widest text-xs mb-3 text-center">What I offer</p>
+        <h2 class="text-2xl font-bold text-[#1a2e12] mb-8 text-center">
+          Bringing Stress-Free Vet Care to Your Doorstep
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            {
-              title: 'Stress-Free Visits',
-              body: 'Pets are naturally more relaxed in their home environment. By coming to you, Nicole can provide more accurate assessments and a calmer experience for anxious or elderly animals.'
-            },
-            {
-              title: 'No Time Pressure',
-              body: 'Unlike busy clinics, home visits mean Nicole can take all the time needed to answer your questions, examine your pet thoroughly, and create a complete care plan.'
-            },
-            {
-              title: 'Preventative Focus',
-              body: 'Nicole believes prevention is always better than cure. Every visit includes a tailored preventative care plan to keep your pet healthy for years to come.'
-            },
-          ].map(p => (
-            <div class="text-center">
-              <div class="paw-icon mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                </svg>
-              </div>
-              <h3 class="font-bold text-[#2c1a0e] mb-2">{p.title}</h3>
-              <p class="text-sm text-[#6b4c2a] leading-relaxed">{p.body}</p>
+            { title: 'Vaccinations', icon: '💉' },
+            { title: 'Medical Consultations', icon: '🩺' },
+            { title: 'Ongoing Disease Management', icon: '📋' },
+            { title: 'Puppy & Kitten Checks', icon: '🐾' },
+            { title: 'Senior Wellness Care', icon: '🌿' },
+            { title: 'Quality of Life Assessments', icon: '❤️' },
+            { title: 'Compassionate End-of-Life Support', icon: '🕊️' },
+            { title: 'Prescription Reviews', icon: '📝' },
+            { title: 'Telemedicine Consultations', icon: '📱' },
+          ].map(item => (
+            <div class="flex items-start gap-3 rounded-xl p-4" style="background-color:#F5F5F0;">
+              <span class="text-xl shrink-0">{item.icon}</span>
+              <p class="text-sm font-medium text-[#1a2e12]">{item.title}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Second image -->
+      <!-- Three pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {[
+          {
+            title: 'Calm & Thorough',
+            body: 'I take the time to truly get to know your pet — no rushed appointments, no clinic chaos. Just calm, thorough care at home.'
+          },
+          {
+            title: "You're Fully Informed",
+            body: "I make sure you feel fully informed and supported every step of the way — from diagnosis through to treatment and follow-up."
+          },
+          {
+            title: 'As Gentle as Possible',
+            body: "Vet visits can be stressful for both pets and their people. I'm here to make the experience as gentle and positive as it can be."
+          },
+        ].map(p => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm" style="border-top: 4px solid #4A7337;">
+            <h3 class="font-bold text-[#1a2e12] mb-2 text-lg">{p.title}</h3>
+            <p class="text-sm text-[#5a3d1e] leading-relaxed">{p.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Who I care for -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 class="text-2xl font-bold text-[#2c1a0e] mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
-            Who We Care For
+          <p class="text-[#4A7337] font-semibold uppercase tracking-widest text-xs mb-3">Who I care for</p>
+          <h2 class="text-2xl font-bold text-[#1a2e12] mb-4">
+            Your Pet, in Their Own Space
           </h2>
-          <p class="text-[#6b4c2a] leading-relaxed mb-4">
-            Kiwi Paws Home Vet cares for dogs, cats, rabbits, and other small companion animals. Whether you need a routine wellness check, vaccinations, management of an ongoing condition, or end-of-life care, Nicole provides comprehensive services tailored to your pet.
+          <p class="text-[#5a3d1e] leading-relaxed mb-4">
+            I provide in-home visits for dogs, cats, rabbits, and other small companion animals across Hamilton and the greater Waikato — particularly great for pets who find clinic visits stressful.
           </p>
           <ul class="space-y-2 mb-6">
             {[
-              'Dogs (all sizes and breeds)',
+              'Dogs — all sizes and breeds',
               'Cats — especially those who hate carriers',
               'Rabbits and small mammals',
-              'Senior and palliative care patients',
+              'Senior & palliative care patients',
               'Anxious or fearful animals',
               'Multi-pet households',
             ].map(item => (
-              <li class="flex items-center gap-2 text-[#6b4c2a] text-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b8c5a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <li class="flex items-center gap-2 text-[#5a3d1e] text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A7337" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                 {item}
               </li>
             ))}
           </ul>
+          <p class="text-[#5a3d1e] text-sm italic">
+            Follow along at <a href="https://www.instagram.com/kiwipawshomevet" target="_blank" rel="noopener noreferrer" class="text-[#4A7337] font-semibold hover:underline">@kiwipawshomevet</a>
+          </p>
         </div>
         <div>
           <img
             src="https://images.squarespace-cdn.com/content/v1/69914e60b1210a495133a353/4b3e5224-9463-4901-b003-87c2f88a1283/IMG_2192.jpeg"
-            alt="Kiwi Paws Home Vet caring for pets"
+            alt="Dr Nicole Hunwick caring for a pet at home"
             class="w-full rounded-2xl shadow-lg object-cover"
-            style="max-height: 380px;"
+            style="max-height: 400px;"
           />
         </div>
       </div>
@@ -129,11 +150,14 @@ const u = (path: string) => `${base}${path}`;
   </section>
 
   <!-- CTA -->
-  <section class="py-12 text-center" style="background-color: #6b8c5a;">
+  <section class="py-12 text-center" style="background-color: #4A7337;">
     <div class="max-w-xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-white mb-3" style="font-family: 'Playfair Display', Georgia, serif;">Ready to meet Nicole?</h2>
-      <p class="text-white/90 mb-6">Book a home visit and see the difference stress-free vet care can make.</p>
-      <a href={u("/book")} class="btn-primary" style="background-color: white; color: #6b8c5a;">Book a Home Visit</a>
+      <h2 class="text-2xl font-bold text-white mb-3">Ready to meet Dr Nicole?</h2>
+      <p class="text-white/90 mb-6">Book a home visit and see the difference stress-free vet care can make for your pet.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href={u('/book')} class="btn-primary" style="background-color: white; color: #4A7337;">Book a Home Visit</a>
+        <a href={u('/contact')} class="btn-outline" style="border-color: rgba(255,255,255,0.6); color: white;">Get in Touch</a>
+      </div>
     </div>
   </section>
 
